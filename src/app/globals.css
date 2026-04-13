@@ -657,9 +657,115 @@ footer{border-top:1px solid var(--border)}
   .signal-body{flex-direction:column}
   .signal-sidebar{width:100%;border-right:none;border-bottom:1px solid var(--border)}
 }
+.philosophy{
+  height:250vh;
+  position:relative;
+}
+.philosophy-sticky{
+  position:sticky;
+  top:0;
+  height:100vh;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 48px;
+  display:flex;
+  align-items:center;
+}
+.philosophy-text{
+  font-family:var(--ff-display);
+  font-size:clamp(36px,5vw,72px);
+  font-weight:400;
+  line-height:1.02;
+  letter-spacing:-.03em;
+  color:var(--fg);
+}
+.philosophy-word{
+  display:inline-block;
+  margin-right:.12em;
+  will-change:filter,opacity;
+}
+.philosophy-word-accent{color:var(--accent)}
+
+.products{display:block}
+.product-row{
+  height:250vh;
+  position:relative;
+}
+.product-sticky{
+  position:sticky;
+  top:0;
+  height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 48px;
+  align-items:center;
+}
+.product-sticky-reverse .product-media{order:2}
+.product-sticky-reverse .product-body{order:1}
+.product-media{
+  width:100%;
+  height:70vh;
+  border:1px solid var(--border);
+  border-radius:48px;
+  overflow:hidden;
+  background:#0a0a0a;
+}
+.product-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.product-body{display:flex;flex-direction:column;gap:24px;max-width:520px}
+.product-reveal{will-change:filter,opacity}
+.product-reveal .product-cta{display:inline-flex;align-self:flex-start}
+.product-label{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.product-title{
+  font-family:var(--ff-display);
+  font-size:clamp(48px,5.5vw,84px);
+  font-weight:700;
+  line-height:.95;
+  letter-spacing:-.03em;
+  margin:0;
+}
+.product-desc{
+  font-size:clamp(18px,1.6vw,22px);
+  line-height:1.5;
+  color:var(--fg);
+  margin:0;
+}
+.product-word{
+  display:inline-block;
+  margin-right:.22em;
+  will-change:filter,opacity;
+}
+.product-cta{align-self:flex-start;margin-top:16px}
+@media(max-width:900px){
+  .product-sticky{
+    grid-template-columns:1fr;
+    gap:40px;
+    padding:80px 24px;
+    height:auto;
+    min-height:100vh;
+  }
+  .product-sticky-reverse .product-media{order:1}
+  .product-sticky-reverse .product-body{order:2}
+  .product-media{height:50vh}
+  .product-row{height:auto}
+}
 @media(max-width:600px){
   .steps-grid{grid-template-columns:1fr}
   .hero-headline{letter-spacing:-.03em}
   .qsr-metrics{grid-template-columns:1fr 1fr}
+  .philosophy{padding:0 24px}
 }
 
