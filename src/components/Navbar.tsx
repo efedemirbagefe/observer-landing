@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,12 +18,11 @@ export default function Navbar() {
         Observer<span>.</span>
       </a>
       <ul className="nav-links">
-        <li><a href="#signal">Signal</a></li>
-        <li><a href="#plainify">Plainify</a></li>
-        <li><a href="#how">How we build</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#team">Team</a></li>
       </ul>
-      <a href="mailto:efe@observerai.co" className="nav-cta">Get in touch</a>
+      <Button href="mailto:efe@observerai.co">Contact Us</Button>
     </nav>
   );
 }
